@@ -1,17 +1,18 @@
 # Metasploit_Lab
-first attempt at making something I can post on LinkedIn about a lab in my boot camp
+The other night in the Evolve Cybersecurity Boot Camp, our cohort was guided through a super simple Metasploit
+exploitation.  I wrote this writeup for others to understand it, also using Github for the first time this way.
 
 ![image](https://user-images.githubusercontent.com/83624183/117094337-cb854680-ad20-11eb-88ea-a0049748dffa.png)
 
 
 This first screenshot shows me using nmap. First I scan the entire network of an IP with a general scan. 
-Then, once I've identified 10.50.146.156 as the IP with the vulnerabilities I want to target, I'm re-scanning
-it using the -sV switch, which will hopefully show me versions of operating systems and programs running.
+Then, once I've identified the IP with the vulnerabilities I want to target, I'm re-scanning it using the
+-sV switch, which will hopefully show me versions of operating systems and programs running.
 
 ![image](https://user-images.githubusercontent.com/83624183/116955136-ed15fd80-ac4e-11eb-8b29-c9bb34135356.png)
 
 I open a new tab in my terminal and type in msfconsole to start the Metasploitable Framework. This is essentially
-a program that aggregates all kinds of tools and programs that can be used to attack a computer. There are many
+a program that aggregates all kinds of tools and programs that can be used to attack a machine. There are many
 Exploits in it, which are programs that take advantage of very specific bugs or weaknesses in operating systems
 or other software that hackers somewhere discovered. 
 
@@ -43,7 +44,7 @@ it downrange at the machine I am attacking simply by typing 'exploit' at the mod
 The program lists the steps as it achieves them, including in the last line giving the IP address and Port number
 that the command shell is linking from and to in order to give me the remote shell. A remote shell is essentially
 like sitting in front of the computer I attacked, and getting to type in to it what I want as if I were there.
-As you can see, I typed the command 'whoami' to which the computer responded, 'root'. This is the best possibe
+As you can see, I typed the command 'whoami' to which the machine responded, 'root'. This is the best possibe
 scenario, where I can now do anything I want with godlike administrator powers.
 
 ![image](https://user-images.githubusercontent.com/83624183/117094106-1c486f80-ad20-11eb-8016-e6ce50a4cbaa.png)
@@ -52,7 +53,7 @@ This final screenshot shows a process where I uploaded an extra little program
 which creates a much more stable shell (terminal, like where you are sitting in
 front of the computer) that is much less likely to accidentally crash or stop 
 working. This is usually important to do before an attacker starts to really do
-work on the computer they attack. 
+work on the machine they attack. 
 First I pressed control-Z, and responded yes to 'background' the session. Next
 I typed in 'sessions' to list that one session. This allows me to keep that
 exploit running, while I continue to work in my own computer. 
@@ -60,7 +61,7 @@ Then I typed in 'sessions -u 1' which essentially told the Meterpreter
 program to Upgrade the session as I just described. It's a totally automated
 process, that allows me not to have to dig around searching for the computer
 codes online which will achieve this, and not have to send them to the victim
-computer using potentially complicated commands. It's being able to do all those
+machine using potentially complicated commands. It's being able to do all those
 things manually that really make a person a good hacker, but Metasploitable and 
 Meterpreter do these things quickly and automatically for you.
 Finally at the bottom I listed the sessions again, and typed 'sessions -i 2' which
