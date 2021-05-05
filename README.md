@@ -1,7 +1,8 @@
 # Metasploit_Lab
 first attempt at making something I can post on LinkedIn about a lab in my boot camp
 
-![image](https://user-images.githubusercontent.com/83624183/116954906-66612080-ac4e-11eb-91ec-070d70aa5137.png)
+![image](https://user-images.githubusercontent.com/83624183/117094022-e0ada580-ad1f-11eb-979f-e6824bd7d31f.png)
+
 
 This first screenshot shows me using nmap. First I scan the entire network of an IP with a general scan. 
 Then, once I've identified 10.50.146.156 as the IP with the vulnerabilities I want to target, I'm re-scanning
@@ -24,7 +25,7 @@ In the first image you can see cut off at the top, that I typed in searchsploit 
 right side below the utility came up with a bunch of exploits. These are all stored in Kali Linux already, and
 refered to by numbers, for instance 16921.rb at the very bottom right. Kali Linux is so awesome!
 
-![image](https://user-images.githubusercontent.com/83624183/116955613-45013400-ac50-11eb-9c7f-7c196fe9ed1c.png)
+![image](https://user-images.githubusercontent.com/83624183/117094062-fae78380-ad1f-11eb-8840-a4a69f10f183.png)
 
 Metasploit contains modules, which are essentially prepackaged exploits, and are designed to make using
 the exploit super easy. In this screenshot the name and file path are in red, indicating that is the 
@@ -32,8 +33,8 @@ module I am inside. When I typed 'show options', a little chart popped up showin
 to enter to make it work. Next to RPORT there is already a port number that works, number 21 so I won't change
 that. There is a blank next to RHOSTS, however, as well as 'yes' written under 'Required' which indicates a 
 value does need to be there. RHOSTS are the host IP's I want to attack. And so, I type 'set RHOSTS <Target IP>
-  
-![image](https://user-images.githubusercontent.com/83624183/116955880-f99b5580-ac50-11eb-8339-e381b3294f50.png)
+
+![image](https://user-images.githubusercontent.com/83624183/117094096-0f2b8080-ad20-11eb-859a-d184d5fb230b.png)
 
 Once I have filled out the information for the IP addresses and ports I want the exploit to attack, I can shoot 
 it downrange at the machine I am attacking simply by typing 'exploit' at the module's prompt, as you see here.
@@ -43,7 +44,7 @@ like sitting in front of the computer I attacked, and getting to type in to it w
 As you can see, I typed the command 'whoami' to which the computer responded, 'root'. This is the best possibe
 scenario, where I can now do anything I want with godlike administrator powers.
 
-![image](https://user-images.githubusercontent.com/83624183/116956025-72021680-ac51-11eb-94dd-a2fd356b6f15.png)
+![image](https://user-images.githubusercontent.com/83624183/117094106-1c486f80-ad20-11eb-8016-e6ce50a4cbaa.png)
 
 This final screenshot shows a process where I uploaded an extra little program
 which creates a much more stable shell (terminal, like where you are sitting in
